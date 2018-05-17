@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f19696"
+        android:id="@+id/recipe_photo"
+        android:layout_weight="3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#cef18a">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="요리 이름"
+                android:textSize="12dp"
+                android:id="@+id/recipe_name"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#97f9f4">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="요리에 대한 설명"
+                android:textSize="12dp"
+                android:id="@+id/recipe_explain"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
