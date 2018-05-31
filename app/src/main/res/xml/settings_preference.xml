@@ -4,10 +4,14 @@
     <PreferenceCategory android:title="설정">
         <SwitchPreference
             android:key="message_alarm"
-            android:title="메세지 알림"/>
+            android:switchTextOff="Off"
+            android:switchTextOn="On"
+            android:title="메세지 알림" />
         <SwitchPreference
             android:key="sound_alarm"
-            android:title="소리 알람"/>
+            android:title="소리 알람"
+            android:switchTextOff="Off"
+            android:switchTextOn="On"/>
 
     </PreferenceCategory>
     <ListPreference

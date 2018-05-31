@@ -14,15 +14,13 @@ import java.util.ArrayList;
 public class ListViewAdapter extends BaseAdapter{
     private ArrayList<product_list_data> listViewItemList = new ArrayList<product_list_data>();
 
-    public ListViewAdapter(){
-
-    }
-
+    // listView의 항목 수를 반환해주는 메소드
     @Override
     public int getCount(){
         return listViewItemList.size();
     }
 
+    // ListView의 항목 위치를 통해 받아오는 메소드
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         final int pos = position;

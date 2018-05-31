@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "413205845537",
+    "firebase_url": "https://tasproject-d6e68.firebaseio.com",
+    "project_id": "tasproject-d6e68",
+    "storage_bucket": "tasproject-d6e68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413205845537:android:a7ef2d6d6ccb8ac9",
+        "android_client_info": {
+          "package_name": "com.example.bjg70.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413205845537-4s07tguth40lvrndtfnf4piqeltsvkl0.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "413205845537-4s07tguth40lvrndtfnf4piqeltsvkl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF8xMIQc_h6kpnHIMofNq9KfZ48FswWZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

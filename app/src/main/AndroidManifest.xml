@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bjg70.example">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +23,13 @@
         </activity>
         <activity android:name=".product_list"/>
         <activity android:name=".recipe_list"/>
+        <activity android:name=".notice_list"/>
+        <activity
+            android:name=".pen_option"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
     </application>
 
 </manifest>

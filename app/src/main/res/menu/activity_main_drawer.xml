@@ -25,10 +25,6 @@
                 android:icon="@drawable/ic_menu_camera"
                 android:title="카메라 인식"/>
             <item
-                android:id="@+id/voice_recognition"
-                android:icon="@drawable/ic_launcher_foreground"
-                android:title="음성 인식"/>
-            <item
                 android:id="@+id/write_recognition"
                 android:icon="@drawable/ic_launcher_foreground"
                 android:title="수기 입력" />

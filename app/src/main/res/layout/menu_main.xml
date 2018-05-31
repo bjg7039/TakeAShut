@@ -38,7 +38,8 @@
                         android:gravity="center"
                         android:textColor="#ff3c3c"
                         android:textSize="20dp"
-                        android:text="● 위험 : 2개" />
+                        android:id="@+id/danger_product"
+                        android:hint="● 위험 : 2개" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -52,7 +53,8 @@
                         android:gravity="center"
                         android:textColor="#ffeb41"
                         android:textSize="20dp"
-                        android:text="● 경고 : 0개" />
+                        android:id="@+id/caution_product"
+                        android:hint="● 경고 : 0개" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -66,7 +68,8 @@
                         android:gravity="center"
                         android:textColor="#37ff00"
                         android:textSize="20dp"
-                        android:text="● 안전 : 0개" />
+                        android:id="@+id/safety_product"
+                        android:hint="● 안전 : 0개" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -119,19 +122,6 @@
 
                     <ImageView
                         android:id="@+id/camera_icon"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:gravity="center" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:id="@+id/voice_icon"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:gravity="center" />
