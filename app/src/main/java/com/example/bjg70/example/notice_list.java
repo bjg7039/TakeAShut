@@ -2,20 +2,64 @@ package com.example.bjg70.example;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class notice_list extends AppCompatActivity{
     private ListView listView;
-
+    List noticeDate = new ArrayList<>();
+    List noticeTitle = new ArrayList<>();
+    List noticeDetail = new ArrayList<>();
+    ArrayAdapter adapter;
+    static boolean calledAlready = false;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.menu_notice);
+        if(!calledAlready){
+            FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+            calledAlready = true;
+        }
 
-        dataSetting();
+        listView = (ListView)findViewById(R.id.recipe_list);
+
+        adapter = new ArrayAdapter<String>(this, R.layout.notice_row_list);
+
+        listView.setAdapter(adapter);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("notice");
+
+        reference.child("1").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot fireSnapshot : dataSnapshot.getChildren()){
+                    String title = fireSnapshot.child("title").getValue(String.class);
+                    noticeTitle.add(title);
+                    String date = fireSnapshot.child("date").getValue(String.class);
+                    noticeDate.add(date);
+                    String detail = fireSnapshot.child("detail").getValue(String.class);
+                    noticeDetail.add(detail);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     private void dataSetting(){
