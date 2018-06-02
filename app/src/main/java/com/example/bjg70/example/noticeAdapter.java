@@ -50,10 +50,9 @@ public class noticeAdapter extends BaseAdapter{
         return convertView;
     }
 
-    public void addItem(String n, String t, String d, String c) {
+    public void addItem(String t, String d, String c) {
         notice_list_data notice_list_data = new notice_list_data();
 
-        notice_list_data.setNotice_number(n);
         notice_list_data.setNotice_title(t);
         notice_list_data.setNotice_date(d);
         notice_list_data.setNotice_contents(c);
